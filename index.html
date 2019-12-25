@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Permutation Generator</title>
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+  </head>
+  <body>
+    <header><h3>Permutation Generator</h3></header>
+    <main class="container">
+      <section class="input-container">
+        <div class="options-panel">
+          <label for="duplicates" class="duplicates">
+            <input type="checkbox" id="duplicates" />
+            <span
+              >Avoid duplicates
+              <em>(Generate only distinct permutations)</em></span
+            >
+          </label>
+          <button class="btn btn--generate">Generate</button>
+        </div>
+        <label for="input-string" class="input-string">
+          <input
+            type="text"
+            id="input-string"
+            class="input-field"
+            placeholder="Enter item"
+          />
+          <button class="btn btn--add">Add</button>
+          <button class="btn btn--remove-all">Remove All</button>
+        </label>
+        <div class="item-count">
+          <span>#Inputs&nbsp;</span>
+          <span id="input-item-count">24</span>
+        </div>
+        <ul id="inputs-list" class="inputs"></ul>
+      </section>
+      <section class="output-container">
+        <div class="results-header">
+          <span>Permutations:</span>
+        </div>
+        <div class="item-count">
+          <span>#Results</span>
+          <span id="output-item-count">24</span>
+        </div>
+        <ul id="result-list" class="result"></ul>
+      </section>
+    </main>
+    <script src="./main.js" type="application/javascript"></script>
+  </body>
+</html>

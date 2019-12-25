@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+:focus {
+  outline: 1px solid rgba(0, 0, 0, 0.24);
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+header {
+  padding: 24px;
+  text-align: center;
+}
+
+header h3 {
+  font-size: 32px;
+  font-weight: 300;
+  font-variant: small-caps;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  height: calc(100vh - 164px);
+  margin-top: 24px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.24);
+  display: flex;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 50%;
+  height: inherit;
+  border-right: 1px solid #dedede;
+  align-items: center;
+  padding: 24px;
+}
+
+.options-panel {
+  padding: 24px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.options-panel .duplicates {
+  margin-right: 12px;
+}
+
+.btn {
+  padding: 10px 16px;
+  margin: 0 12px;
+  font-size: 14px;
+  border: none;
+  outline: none;
+  background-color: white;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.144), 2px 2px 3px rgba(0, 0, 0, 0.144),
+    -2px 2px 3px rgba(0, 0, 0, 0.144);
+}
+
+.btn:active {
+  background-color: ivory;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.144), 2px 1px 1px rgba(0, 0, 0, 0.144),
+    -2px 1px 1px rgba(0, 0, 0, 0.144);
+}
+
+input[type='text'] {
+  border: none;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.24);
+  padding: 10px 16px;
+}
+
+.input-string {
+  display: flex;
+  align-self: stretch;
+  margin: 18px 0;
+}
+
+.input-field {
+  flex: 1;
+  margin-right: 12px;
+  font-size: 16px;
+}
+
+.inputs,
+.result {
+  margin-top: 24px;
+  align-self: stretch;
+  overflow: auto;
+  border: 1px solid #cecece;
+  min-height: 48px;
+}
+
+.result li,
+.inputs .input-item {
+  background-color: #efefef;
+  padding: 12px 18px;
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.result li:nth-child(odd),
+.inputs .input-item:nth-child(odd) {
+  background-color: white;
+}
+
+.remove-item {
+  border: 1px solid rgba(0, 0, 0, 0.144);
+  width: 24px;
+  text-align: center;
+  line-height: 24px;
+  cursor: pointer;
+}
+
+.output-container {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 50%;
+  height: inherit;
+  align-items: center;
+  padding: 24px;
+}
+
+.output-container .results-header {
+  font-size: 18px;
+}
+
+.output-container .results-header,
+.output-container .item-count {
+  margin: 12px;
+}
+
+.result li {
+  padding: 4px 18px;
+}

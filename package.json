@@ -1,0 +1,10 @@
+{
+  "name": "permutation-generator",
+  "version": "0.1.0",
+  "description": "Simple online tool to generate permutations of items, implemented using HTML,CSS & plainJS.",
+  "main": "index.html",
+  "repository": "https://github.com/rehman-00001/permutation-generator",
+  "author": "Abdul Rehman",
+  "license": "MIT",
+  "private": false
+}
