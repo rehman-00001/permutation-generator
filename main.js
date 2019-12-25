@@ -24,7 +24,6 @@
 
   const inputs = ['A', 'B', 'C'];
   const outputs = [];
-  const shouldAvoidDuplicate = false;
 
   function addItem(text) {
     inputs.push(text);
@@ -87,9 +86,15 @@
   }
 
   function generateButtonListener() {
-    const newOP = generatePermutation(inputs);
+    const permutationList = generatePermutation(inputs);
     outputs.length = 0;
-    outputs.push(...newOP.map(item => item.join(', ')));
+    const stringified = permutationList.map(item => item.join(', '));
+    if (_avoidDuplicates.checked) {
+      outputs.push(...[...new Set(stringified)]);
+    } else {
+      outputs.push(...stringified);
+    }
+
     renderOutputList();
   }
 
@@ -102,12 +107,6 @@
       addButtonListener();
     }
   }
-
-  _addBtn.addEventListener('click', addButtonListener);
-  _removeAllBtn.addEventListener('click', removeAllButtonListener);
-  _inputsList.addEventListener('click', deleteItemListener);
-  _generateBtn.addEventListener('click', generateButtonListener);
-  _itemTextField.addEventListener('keyup', enterKeyPressListener);
 
   function generatePermutation(xs) {
     let ret = [];
@@ -125,6 +124,12 @@
     }
     return ret;
   }
+
+  _addBtn.addEventListener('click', addButtonListener);
+  _removeAllBtn.addEventListener('click', removeAllButtonListener);
+  _inputsList.addEventListener('click', deleteItemListener);
+  _generateBtn.addEventListener('click', generateButtonListener);
+  _itemTextField.addEventListener('keyup', enterKeyPressListener);
 
   renderInputList();
   generateButtonListener();
